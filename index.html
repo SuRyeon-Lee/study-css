@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="ex.css" />
+    <title></title>
+  </head>
+  <body>
+    <div class="ex ex01">
+      <h1>📌 :has()</h1>
+      <div class="grandparent">
+        <h1>I'm grandparent 01</h1>
+        <div class="parent">
+          <h2>I'm parent</h2>
+          <div class="child">
+            <h3>I'm child</h3>
+            <div class="grandchild">
+              <h4>I'm grandchild</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grandparent">
+        <h1>I'm grandparent 02</h1>
+        <h1>Hi!</h1>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="ex ex02">
+      <h1>📌 :has() 활용예시</h1>
+      <h1>도서 분류</h1>
+      <ul>
+        <li>
+          <p>일반 소설<span class="bestLabel">best</span></p>
+        </li>
+        <li class="best"><p>SF/판타지<span>sss</span></p></li>
+        <li><p>인문학</p></li>
+      </ul>
+    </div>
+
+
+
+
+    <div class="ex ex03">
+      <h1>📌 accent-color</h1>
+      <form>
+        <label for="진하">
+          <span>진하</span>
+          <input type="checkbox" id="진하" />
+        </label>
+        <label for="루지">
+          <span>루지</span>
+          <input type="checkbox" id="루지" />
+        </label>
+        <label for="아낙">
+          <span>아낙</span>
+          <input type="radio" id="아낙" />
+        </label>
+        <label for="썸퍼">
+          <span>썸퍼</span>
+          <input type="radio" id="썸퍼" />
+        </label>
+
+        <input type="range" />
+
+        <label for="file">File progress:</label>
+        <progress id="file" max="100" value="70">70%</progress>
+      </form>
+    </div>
+
+
+
+    
+    <div class="ex ex04">
+      <h1>📌 scroll snap</h1>
+      <div class="scroll-container">
+        <div class="scroll-area">1</div>
+        <div class="scroll-area">2</div>
+        <div class="scroll-area">3</div>
+        <div class="scroll-area">4</div>
+      </div>
+    </div>
+  </body>
+
+
+
+  <div class="ex ex05">
+    <h1>📌 논리적 속성(inline 및 block)</h1>
+    <blockquote class="1" dir="ltr">Quotation in English</blockquote>
+    <blockquote class="2" dir="rtl">اقتباس في العربية</blockquote>
+    <blockquote class="3 vertical01">其實，這幾種不同文字<br/>其實끝</blockquote>
+    <blockquote class="3 vertical02">꽃이 진다고<br/>그대를 잊은 적 없다</blockquote>
+    <blockquote class="3 vertical02">1234<br/>56789101112</blockquote>
+  </div>
+</body>
+</html>

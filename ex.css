@@ -1,0 +1,126 @@
+/* 
+비활성 속성 
+
+:has()
+지정 요소를 갖는 모든 요소 선택
+
+*/
+
+/* --------- ex01 ---------*/
+/* .ex01 div:has(h1) {
+  background-color: red;
+} */
+
+/* .ex01 div:has(h4) {
+  background-color: red;
+} */
+
+/* .ex01 div:has(> h4) {
+  background-color: red;
+} */
+
+/* .ex01 div:has(+ div) {
+  background-color: blue;
+} */
+
+/* .ex01 div:has(.grandchild) {
+  background-color: blue;
+} */
+
+/* .ex01 h1:has(+ h1) {
+  color: blue;
+} */
+
+/* --------- ex02 ---------*/
+/* li:has(.bestLabel) {
+  font-weight: 700;
+  text-decoration: underline;
+} */
+/* li.best {
+  font-weight: 700;
+  text-decoration: underline;
+}
+li.best span {
+  display: inline-block;
+  padding: 2px 5px;
+  margin-left: 5px;
+  border-radius: 20px;
+  background: orange;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+} */
+
+/* --------- ex03 ---------*/
+/* .ex03 input,
+.ex03 progress {
+  accent-color: red;
+} */
+
+/* --------- ex04 ---------*/
+.ex04 .scroll-container {
+  height: 100vh;
+  /* y , x , block, inline */
+  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y proximity; */
+
+  /* scroll-padding: 50px; */
+
+  /* 
+  auto contain none
+  auto : default, scroll chaining 발생
+  contain & none : PullToRefresh 기능이 비활성화
+  none: onverscroll effect를 꺼버림
+  https://developer.chrome.com/blog/overscroll-behavior/#disabling-overscroll-glow-and-rubberbanding-effects 
+  */
+
+  overscroll-behavior : none;
+}
+/* .ex04 .scroll-container::-webkit-scrollbar {
+  display: none;
+} */
+
+.ex04 .scroll-area {
+  height: 100vh;
+  /* 
+  none: snap position을 지정하지 않음
+  start: 축을 기준으로 snap area의 시작 부분에 맞춰 정렬
+  end: snap area의 끝에 맞춰 정렬
+  center: snap area의 가운데에 맞춰 정렬 */
+  scroll-snap-align: start;
+  /* scroll-margin: 100px; */
+}
+
+/* --------- ex05 ---------*/
+.ex05 blockquote {
+  /* padding: 16px 0 16px;
+  padding-top:16px;
+  padding-bottom:16px; */
+
+  /* border-inline: solid 4px #de354c; */
+  border-inline-start: solid 4px #de354c;
+  padding-inline: 16px;
+  background-color: rgb(230, 230, 230);
+  padding-block: 8px;
+}
+
+.ex05 .vertical01 {
+  writing-mode: vertical-rl;
+  /* writing-mode: vertical-lr */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode */
+  font-size: 20px;
+  font-family: Microsoft JhengHei, 微軟正黑體, Heiti TC, 黑體-繁, sans-serif;
+  line-height: 2; //가로
+  line-width: 1;
+}
+
+.ex05 .vertical02 {
+  writing-mode: vertical-lr;
+  /* writing-mode: vertical-lr */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode */
+  font-size: 20px;
+  font-family: Microsoft JhengHei, 微軟正黑體, Heiti TC, 黑體-繁, sans-serif;
+  line-height: 2; //가로
+  /* letter-spacing: 3rem; */
+  word-spacing: 3rem;
+}
